@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<script type="text/javascript" src="/resources/js/vendor/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/vendor/modernizr-3.5.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/animated.headline.js"></script>
+<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resources/js/contact.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.ajaxchimp.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.form.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.nice-select.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.paroller.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.slicknav.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/resources/js/mail-script.js"></script>
+<script type="text/javascript" src="/resources/js/main.js"></script>
+<script type="text/javascript" src="/resources/js/one-page-nav-min.js"></script>
+<script type="text/javascript" src="/resources/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/resources/js/plugins.js"></script>
+<script type="text/javascript" src="/resources/js/popper.min.js"></script>
+<script type="text/javascript" src="/resources/js/price-range.js"></script>
+<script type="text/javascript" src="/resources/js/slick.min.js"></script>
+<script type="text/javascript" src="/resources/js/wow.min.js"></script>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shop.carrental.mappers.NoticeMapper">
+
+	<resultMap type="noticeDTO" id="noticeMap">
+		<id property="notice_seq" column="notice_seq" />
+		<result property="notice_type" column="notice_type" />
+		<result property="notice_title" column="notice_title" />
+		<result property="notice_writer" column="notice_writer" />
+		<result property="notice_content" column="notice_content" />
+		<result property="notice_count" column="notice_count" />
+		<result property="notice_good" column="notice_good" />
+		<result property="notice_bad" column="notice_bad" />
+		<result property="notice_reg_date" column="notice_reg_date" />
+		<result property="notice_update" column="notice_update" />
+	</resultMap>
+
+	<sql id="criteria">
+		<trim prefix="(" suffix=")AND" prefixOverrides="OR">
+			<foreach collection="searchByArray" item="searchBy">
+				<trim prefix="OR">
+					<choose>
+						<when test="searchBy=='T'.toString()">
+							<![CDATA[
+								UPPER(notice_title) LIKE'%'||UPPER(#{keyword})||'%'
+							]]>
+						</when>
+						<when test="searchBy=='C'.toString()">
+							<![CDATA[
+								UPPER(notice_content) LIKE'%'||UPPER(#{keyword})||'%'
+							]]>
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+
+	<select id="list" resultMap="noticeMap">
+		<![CDATA[
+			SELECT NOTICE_SEQ,NOTICE_TYPE,NOTICE_TITLE,NOTICE_WRITER,NOTICE_CONTENT,NOTICE_COUNT,NOTICE_GOOD,NOTICE_BAD,NOTICE_REG_DATE,NOTICE_UPDATE
+				FROM
+					(
+						SELECT /*+INDEX_DESC(notice pk_notice)*/
+							ROWNUM rn,notice_seq,notice_type,notice_title,notice_writer,notice_content,notice_count,notice_good,notice_bad,notice_reg_date,notice_update
+							FROM notice
+						WHERE
+			]]>
+		<include refid="criteria" />
+		<![CDATA[
+						ROWNUM<=#{pageNumber}*#{amount}
+					)
+				WHERE rn>(#{pageNumber}-1)*#{amount}
+		]]>
+	</select>
+
+
+	<select id="read" parameterType="long" resultMap="noticeMap">
+		<![CDATA[
+			SELECT*FROM NOTICE WHERE NOTICE_SEQ=#{notice_seq}
+		]]>
+	</select>
+
+	<select id="total" resultType="int">
+		<![CDATA[
+			SELECT COUNT(*)
+				FROM NOTICE
+			WHERE
+		]]>
+		<include refid="criteria" />
+		<![CDATA[
+			NOTICE_SEQ>0
+		]]>
+	</select>
+
+	<insert id="register">
+			<![CDATA[
+				INSERT INTO NOTICE(NOTICE_SEQ,NOTICE_TYPE,NOTICE_TITLE,NOTICE_WRITER,NOTICE_CONTENT)
+					VALUES
+				(SEQ_NOTICE.EXTVAL,#{notice_type},#{notice_title},#{notice_writer},#{notice_content})
+			]]>
+	</insert>
+
+	<update id="addCount">
+		<![CDATA[
+			UPDATE NOTICE
+				SET NOTICE_COUNT=NOTICE_COUNT+1
+			WHERE NOTICE_SEQ=#{notice_seq}
+		]]>
+	</update>
+
+</mapper>

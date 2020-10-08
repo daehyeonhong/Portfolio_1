@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shop.carrental.mappers.AdminMapper">
+
+	<!-- sql문 모듈 -->
+	<sql id="criteria">
+		<trim prefix="(" suffix=")AND" prefixOverrides="OR">
+			<foreach collection="searchByArray" item="searchBy">
+				<trim prefix="OR">
+					<choose>
+						<when test="searchBy=='T'.toString()">
+							<![CDATA[
+								UPPER(title) LIKE'%'||UPPER(#{keyword})||'%'
+							]]>
+						</when>
+						<when test="searchBy=='C'.toString()">
+							<![CDATA[
+								UPPER(content) LIKE'%'||UPPER(#{keyword})||'%'
+							]]>
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+
+	<resultMap type="branchDTO" id="branchMap">
+		<id property="branch_seq" column="branch_seq" />
+		<result property="branch_name" column="branch_name" />
+		<result property="branch_phone" column="branch_phone" />
+		<result property="branch_address" column="branch_address" />
+		<result property="gps" column="gps" />
+		<result property="maintenance" column="maintenance" />
+		<result property="electric" column="electric" />
+		<result property="branch_type" column="branch_type" />
+		<result property="gps2" column="gps2" />
+	</resultMap>
+
+	<insert id="register">
+		<![CDATA[
+		insert into admins(firstName,lastName,email,password) 
+		values(#{firstName},#{lastName},#{email},#{password})
+		]]>
+	</insert>
+
+	<select id="getAdmin" resultType="shop.carrental.domain.AdminVO">
+		<![CDATA[
+		select * from admins where email=#{email} and password=#{password}
+		]]>
+	</select>
+
+	<select id="getBranchList" resultMap="branchMap">
+		<![CDATA[
+       	select * from
+      	(select /*+index_desc(branch pk_branch) */ 
+  		rownum rn,branch_seq,branch_name,branch_phone,branch_address,gps,maintenance,electric,branch_type,gps2 
+  		from branch  
+  		where 
+  		]]>
+		<include refid="criteria"></include>
+  		<![CDATA[
+  	 	rownum<=#{pageNumber}*#{amount}
+  		)
+  		where rn > (#{pageNumber}-1)*#{amount}
+  		]]>
+	</select>
+
+	<select id="getTotalBranchCount" resultType="int">
+		<![CDATA[
+		select count(*) from branch where 
+		]]>
+		<include refid="criteria"></include>
+		<![CDATA[
+		branch_seq>0
+		]]>
+	</select>
+
+	<insert id="registerBranch">
+		<![CDATA[
+		insert into branch(branch_seq,branch_name,branch_phone,branch_address,gps,maintenance,electric,branch_type,gps2) 
+		values(seq_branch.nextval,#{branch_name},#{branch_phone},#{branch_address},#{gps},#{maintenance},#{electric},#{branch_type},#{gps2})
+		]]>
+	</insert>
+
+</mapper>

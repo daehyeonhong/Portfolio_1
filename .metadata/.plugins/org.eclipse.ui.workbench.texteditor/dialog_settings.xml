@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="/resources/js/"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="js/"/>
+			<item value="js"/>
+			<item value="images/"/>
+			<item value="css/"/>
+			<item value=",js/"/>
+			<item value="images"/>
+			<item value="iamges"/>
+			<item value="iamge"/>
+			<item value="free"/>
+			<item value="img"/>
+			<item value="slick-list draggable"/>
+			<item value="main"/>
+			<item value="ma"/>
+			<item value="/resources/js/vendor/modernizr-3.5.0.min.js"/>
+			<item value="/resources/js/vendor/jquery-1.12.4.min.js"/>
+		</list>
+		<list key="replacehistory">
+			<item value="/resources/js/"/>
+			<item value="/resources/images/"/>
+			<item value="/resources/css/"/>
+			<item value=".js"/>
+			<item value="js/"/>
+			<item value="/resources/js"/>
+			<item value="/resources/css"/>
+			<item value="/resources/images"/>
+			<item value="url(/resources/assets/"/>
+			<item value="&quot;/resources/assets"/>
+			<item value="/resources/assets"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="499"/>
+		<item key="DIALOG_Y_ORIGIN" value="330"/>
+		<item key="DIALOG_WIDTH" value="288"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

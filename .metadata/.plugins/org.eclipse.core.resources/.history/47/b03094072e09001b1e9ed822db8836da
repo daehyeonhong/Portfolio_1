@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.carrental.mappers.GeneralMapper">
+	<resultMap type="inquiryDTO" id="inquiry">
+		<id property="inquiry_seq" column="inquiry_seq" />
+		<result property="inquiry_type" column="inquiry_type" />
+		<result property="inquiry_title" column="inquiry_title" />
+		<result property="inquiry_content" column="inquiry_content" />
+		<result property="users_id" column="users_id" />
+		<result property="inquiry_reg_date" column="inquiry_reg_date" />
+		<result property="inquiry_update" column="inquiry_update" />
+	</resultMap>
+
+	<sql id="criteria">
+		<trim prefix="(" suffix=")AND" prefixOverrides="OR">
+			<foreach collection="searchByArray" item="searchBy">
+				<trim prefix="OR">
+					<choose>
+						<when test="searchBy=='1'.toString()">
+							<![CDATA[
+								INQUIRY_TYPE=1
+							]]>
+						</when>
+						<otherwise>
+							<![CDATA[
+								NOT INQUIRY_TYPE=1
+							]]>
+						</otherwise>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+
+	<insert id="registerInquiry">
+		<![CDATA[
+			INSERT INTO INQUIRY
+				(INQUIRY_SEQ,INQUIRY_TYPE,INQUIRY_TITLE,INQUIRY_CONTENT,USERS_ID)
+			VALUES
+				(seq_inquiry.NEXTVAL,#{inquiry_type},#{inquiry_title},#{inquiry_content},#{users_id})
+		]]>
+	</insert>
+
+	<select id="read" parameterType="long" resultMap="inquiry">
+		<![CDATA[
+			SELECT*FROM INQUIRY WHERE INQUIRY_SEQ=#{inquiry_seq}
+		]]>
+	</select>
+
+	<select id="listInquiry" resultMap="inquiry">
+		<![CDATA[
+			SELECT INQUIRY_SEQ,INQUIRY_TYPE,INQUIRY_TITLE,INQUIRY_CONTENT,INQUIRY_REG_DATE,INQUIRY_UPDATE,USERS_ID,ANSWER_SEQ,STATUS
+				FROM
+					(
+						SELECT /*+INDEX_DESC(INQUIRY PK_INQUIRY)*/
+							ROWNUM rn,INQUIRY_SEQ,INQUIRY_TYPE,INQUIRY_TITLE,INQUIRY_CONTENT,INQUIRY_REG_DATE,INQUIRY_UPDATE,USERS_ID,ANSWER_SEQ,STATUS
+							FROM INQUIRY
+						WHERE
+			]]>
+		<include refid="criteria" />
+		<![CDATA[
+						ROWNUM<=#{pageNumber}*#{amount}
+					)
+				WHERE rn>(#{pageNumber}-1)*#{amount}
+				AND USERS_ID=#{users_id}
+		]]>
+	</select>
+
+	<select id="total" resultType="int">
+		<![CDATA[
+			SELECT COUNT(*)
+				FROM INQUIRY
+			WHERE
+		]]>
+		<include refid="criteria" />
+		<![CDATA[
+			INQUIRY_SEQ>0
+			AND USERS_ID=#{users_id}
+		]]>
+	</select>
+</mapper>
