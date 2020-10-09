@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="/resources/js/"/>
+		<item key="selection" value="&quot; /&gt;"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="&quot;&gt;"/>
+			<item value="section"/>
+			<item value="google"/>
+			<item value="nav"/>
 			<item value="js/"/>
 			<item value="js"/>
 			<item value="images/"/>
@@ -19,12 +23,9 @@
 			<item value="free"/>
 			<item value="img"/>
 			<item value="slick-list draggable"/>
-			<item value="main"/>
-			<item value="ma"/>
-			<item value="/resources/js/vendor/modernizr-3.5.0.min.js"/>
-			<item value="/resources/js/vendor/jquery-1.12.4.min.js"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&quot; /&gt;"/>
 			<item value="/resources/js/"/>
 			<item value="/resources/images/"/>
 			<item value="/resources/css/"/>
