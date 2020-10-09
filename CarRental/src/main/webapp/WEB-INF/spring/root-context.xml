@@ -13,8 +13,7 @@
 	<context:component-scan
 		base-package="car.carrental" />
 
-	<bean
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value><![CDATA[/WEB-INF/spring/config/database.properties]]></value>
@@ -23,7 +22,7 @@
 		</property>
 	</bean>
 
-	<!-- Configuration Hirkari -->
+	Configuration Hirkari
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig"
 		p:driverClassName="${dataSource.driverClassName}"
 		p:jdbcUrl="${dataSource.url}" p:username="${dataSource.user}"
@@ -48,16 +47,16 @@
 		</property>
 	</bean>
 
-	<!-- Configuration DataSource -->
+	Configuration DataSource
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
 		destroy-method="close" c:configuration-ref="hikariConfig" />
 
-	<!-- Get SQLSessionFactory -->
+	Get SQLSessionFactory
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean"
 		p:dataSource-ref="dataSource"
 		p:configLocation="classpath:/com/carrental/config/mybatis-config.xml" />
 
 	<mybatis-spring:scan
-		base-package="com.carrental.mappers" />
+		base-package="com.carrental.mappers" /> -->
 
 </beans>
