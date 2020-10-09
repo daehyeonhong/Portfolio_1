@@ -5,7 +5,44 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-10-07T19:26:00Z</updated>
+  <updated>2020-10-08T21:07:28Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/08/a-bootiful-podcast-reactor-team-engineer-fellow-java-champion-and-conference-organizer-audrey-neveu" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2020-10-08:4225</id>
+    <updated>2020-10-08T21:07:28Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Reactor team engineer, fellow Java Champion, and conference organizer &lt;a href="http://twitter.com/Audrey_Neveu"&gt;Audrey Neveu (@Audrey_Neveu)&lt;/a&gt; &lt;/p&gt;
+&lt;iframe title=" Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/442ux-eec2ba?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security 5.4.1, 5.3.5, 5.2.7, 5.1.13, 5.0.19, 4.2.19 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/08/spring-security-5-4-1-5-3-5-5-2-7-5-1-13-5-0-19-4-2-19-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2020-10-08:4224</id>
+    <updated>2020-10-08T16:16:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Blog
+Projects
+Team
+Spring Tools
+Title
+Spring Security 5.4.1, 5.3.5, 5.2.7, 5.1.13, 5.0.19, 4.2.19 Released
+Content
+On behalf of the community, I&amp;#8217;m pleased to announce the release of Spring Security 5.3.5 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.3.5.RELEASE"&gt;release notes&lt;/a&gt;),  5.2.7 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.2.7.RELEASE"&gt;release notes&lt;/a&gt;), 5.1.13 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.1.13.RELEASE"&gt;release notes&lt;/a&gt;) , 5.0.19 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.0.19.RELEASE"&gt;release notes&lt;/a&gt;), 4.2.19 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/4.2.19.RELEASE"&gt;release notes&lt;/a&gt;). These releases deliver bug fixes along with some minor improvements. Users are encouraged to update to the latest patch release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud 2020.0.0-M4 (aka Ilford) Is Available</title>
     <link rel="alternate" href="https://spring.io/blog/2020/10/07/spring-cloud-2020-0-0-m4-aka-ilford-is-available" />
@@ -1321,66 +1358,6 @@ public FlatFileItemReader&amp;lt;Person&amp;gt; itemReader() {&#xD;
 &lt;p&gt;Please note that version of Spring Framework that is used by this release of Spring Boot contains a fix for &lt;a href="https://tanzu.vmware.com/security/cve-2020-5421"&gt;a security vulnerability (CVE-2020-5421)&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.2.10.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.1.17 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/09/17/spring-boot-2-1-17-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2020-09-17:4205</id>
-    <updated>2020-09-17T16:16:52Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot 2.1.17 has been released and is now available from &lt;a href="https://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.1.17.RELEASE"&gt;22 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
-&lt;p&gt;Please note that version of Spring Framework that is used by this release of Spring Boot contains a fix for &lt;a href="https://tanzu.vmware.com/security/cve-2020-5421"&gt;a security vulnerability (CVE-2020-5421)&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.1.17.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration 5.4 Milestone 3 Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/09/16/spring-integration-5-4-milestone-3-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2020-09-16:4204</id>
-    <updated>2020-09-16T19:30:46Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Dear Spring community,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;please, meet the third (and the last) milestone for Spring Integration &lt;code&gt;5.4&lt;/code&gt; generation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It can be downloaded from our &lt;a href="https://repo.spring.io/milestone"&gt;milestone repository&lt;/a&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;compile 'org.springframework.integration:spring-integration-core:5.4.0-M3'&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Since the previous &lt;a href="https://spring.io/admin/blog/4165-spring-integration-5-4-m2-available"&gt;milestone 2&lt;/a&gt; this release brings number of bug fixes and some internal improvement, including alignment with new &lt;code&gt;Sink&lt;/code&gt; API from project Reactor in the &lt;code&gt;FluxMessageChannel&lt;/code&gt; and &lt;code&gt;IntegrationReactiveUtils&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;See &lt;a href="https://docs.spring.io/spring-integration/docs/5.4.0-M3/reference/html/whats-new.html#whats-new"&gt;What&amp;#8217;s New&lt;/a&gt; in documentation for more information.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This version is going to be pulled in the upcoming Spring Boot &lt;code&gt;2.4.0-M3&lt;/code&gt; release tomorrow.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;You are welcome with any feedback and possible contribution: we are heading for release candidate in the end of October!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Cheers,&amp;#160;&lt;br&gt;
-Artem&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/issues"&gt;GitHub Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

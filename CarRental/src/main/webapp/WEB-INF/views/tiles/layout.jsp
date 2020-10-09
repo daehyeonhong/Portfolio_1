@@ -2,9 +2,10 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <html>
 <head>
-<title>어쩌고 렌터카</title>
+<title>어쩌고A 렌터카</title>
 <tiles:insertAttribute name="css" />
 <tiles:insertAttribute name="script" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
 	<div id="header">
