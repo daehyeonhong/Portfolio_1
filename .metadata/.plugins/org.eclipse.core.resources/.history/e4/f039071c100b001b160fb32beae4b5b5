@@ -1,0 +1,5 @@
+package com.carrental.tt.controller;
+
+public class CommonController {
+
+}

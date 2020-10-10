@@ -1,0 +1,5 @@
+package com.carrental.tt.security;
+
+public class CustomLoginSuccessHandler {
+
+}

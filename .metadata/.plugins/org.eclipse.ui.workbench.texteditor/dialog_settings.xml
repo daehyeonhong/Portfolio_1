@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="over"/>
+		<item key="selection" value="/resources/equipo/"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="/resources/"/>
+			<item value="/resources/equipo/"/>
+			<item value="images/"/>
+			<item value="log"/>
+			<item value="secu"/>
+			<item value="Far far away, behind the word mountains, far"/>
+			<item value="../fonts/flaticon/font/Flaticon"/>
+			<item value="/WEB-INF/views/theme"/>
 			<item value="over"/>
 			<item value="overlay"/>
 			<item value="&quot;&gt;"/>
 			<item value="js/"/>
 			<item value="js"/>
-			<item value="images/"/>
 			<item value="css/"/>
 			<item value=",js/"/>
-			<item value="images"/>
-			<item value="iamges"/>
-			<item value="iamge"/>
-			<item value="free"/>
-			<item value="img"/>
-			<item value="slick-list draggable"/>
-			<item value="main"/>
 		</list>
 		<list key="replacehistory">
+			<item value="/resources/equipo/"/>
+			<item value="/resources/images/"/>
+			<item value="/resources/fonts/flaticon/font/Flaticon"/>
+			<item value="/WEB-INF/views/common"/>
 			<item value="&quot; /&gt;"/>
 			<item value="/resources/js/"/>
-			<item value="/resources/images/"/>
 			<item value="/resources/css/"/>
 			<item value=".js"/>
 			<item value="js/"/>
