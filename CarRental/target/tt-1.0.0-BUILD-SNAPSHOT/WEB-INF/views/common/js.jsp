@@ -10,8 +10,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.css"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="/resources/js/jquery.waypoints.min.js"></script>
-<script src="/resources/js/jquery.stellar.min.js"></script>
-<script src="/resources/js/scrollax.min.js"></script>
-<script src="/resources/js/google-map.js"></script>
-<script src="/resources/js/main.js"></script>
+<script src="/resources/equipo/js/jquery.waypoints.min.js"></script>
+<script src="/resources/equipo/js/jquery.stellar.min.js"></script>
+<script src="/resources/equipo/js/scrollax.min.js"></script>
+<script src="/resources/equipo/js/google-map.js"></script>
+<script src="/resources/equipo/js/main.js"></script>

@@ -5,11 +5,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<security:http>
+	<bean id="customAccessDenied" class="com.carrental.tt.security.CustomAccessDeniedHandler"/>
+	<bean id="customLoginSuccess" class="com.carrental.tt.security.CustomLoginSuccessHandler"/>
+
+	<security:http auto-config="true" use-expressions="true">
 		<security:intercept-url pattern="/sample/all" access="permitAll" />
 		<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')" />
 		<security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')" />
-		<security:form-login />
+		<security:form-login login-page="/customLogin" authentication-success-handler-ref="customLoginSuccess" />
+		<security:access-denied-handler ref="customAccessDenied" />
+		<security:logout logout-url="/customLogout" invalidate-session="true" />
 	</security:http>
 
 	<security:authentication-manager>

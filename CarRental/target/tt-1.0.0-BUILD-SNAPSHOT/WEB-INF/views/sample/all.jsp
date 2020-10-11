@@ -3,13 +3,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>TTRENTAL::All</title>
 <%@ include file="/WEB-INF/views/common/css.jsp"%>
 </head>
 <body>
 	<%@ include file="/WEB-INF/views/common/header.jsp"%>
 	<article>
-	<section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/equipo/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -25,7 +25,7 @@
  <div class="container">
   <div class="row">
    <div class="col-md-6 d-flex align-items-stretch">
-    <div class="about-wrap img w-100" style="background-image: url(/resources/images/about.jpg);">
+    <div class="about-wrap img w-100" style="background-image: url(/resources/equipo/images/about.jpg);">
     </div>
   </div>
   <div class="col-md-6 py-5 pl-md-5">
@@ -75,7 +75,7 @@
 </div>
 </section>
 
-<section class="ftco-section testimony-section img" style="background-image: url(/resources/images/bg_1.jpg);">
+<section class="ftco-section testimony-section img" style="background-image: url(/resources/equipo/images/bg_1.jpg);">
  <div class="overlay"></div>
  <div class="container">
   <div class="row justify-content-center mb-5 pb-3">
@@ -89,7 +89,7 @@
     <div class="carousel-testimony owl-carousel ftco-owl">
       <div class="item">
         <div class="testimony-wrap py-4 pb-5 d-flex justify-content-between">
-          <div class="user-img" style="background-image: url(/resources/images/person_1.jpg)">
+          <div class="user-img" style="background-image: url(/resources/equipo/images/person_1.jpg)">
             <span class="quote d-flex align-items-center justify-content-center">
               <i class="fa fa-quote-left"></i>
             </span>
@@ -103,7 +103,7 @@
       </div>
       <div class="item">
         <div class="testimony-wrap py-4 pb-5 d-flex justify-content-between">
-          <div class="user-img" style="background-image: url(/resources/images/person_2.jpg)">
+          <div class="user-img" style="background-image: url(/resources/equipo/images/person_2.jpg)">
             <span class="quote d-flex align-items-center justify-content-center">
               <i class="fa fa-quote-left"></i>
             </span>
@@ -117,7 +117,7 @@
       </div>
       <div class="item">
         <div class="testimony-wrap py-4 pb-5 d-flex justify-content-between">
-          <div class="user-img" style="background-image: url(/resources/images/person_3.jpg)">
+          <div class="user-img" style="background-image: url(/resources/equipo/images/person_3.jpg)">
             <span class="quote d-flex align-items-center justify-content-center">
               <i class="fa fa-quote-left"></i>
             </span>
@@ -131,7 +131,7 @@
       </div>
       <div class="item">
         <div class="testimony-wrap py-4 pb-5 d-flex justify-content-between">
-          <div class="user-img" style="background-image: url(/resources/images/person_1.jpg)">
+          <div class="user-img" style="background-image: url(/resources/equipo/images/person_1.jpg)">
             <span class="quote d-flex align-items-center justify-content-center">
               <i class="fa fa-quote-left"></i>
             </span>
@@ -145,7 +145,7 @@
       </div>
       <div class="item">
         <div class="testimony-wrap py-4 pb-5 d-flex justify-content-between">
-          <div class="user-img" style="background-image: url(/resources/images/person_3.jpg)">
+          <div class="user-img" style="background-image: url(/resources/equipo/images/person_3.jpg)">
             <span class="quote d-flex align-items-center justify-content-center">
               <i class="fa fa-quote-left"></i>
             </span>
