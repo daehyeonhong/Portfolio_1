@@ -1,24 +1,18 @@
-package com.carrental.tt.controller;
+package shop.carrental.tt.controller;
 
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.log4j.Log4j;
 
-@Controller
 @Log4j
-public class CommonController {
+@Controller
+@RequestMapping(value = "/user/*")
+public class UserController {
 
-	@GetMapping(value = "/accessError")
-	public void accessDenied(Authentication auth, Model model) {
-		log.info("Access Denied ==> " + auth);
-
-		model.addAttribute("msg", "Access Denied");
-	}
-
-	@GetMapping(value = "/customLogin")
+	@GetMapping(value = "/login")
 	public void loginInput(String error, String logout, Model model) {
 		log.info("error ==> " + error);
 		log.info("logout ==> " + logout);
@@ -32,7 +26,7 @@ public class CommonController {
 		}
 	}
 
-	@GetMapping(value = "/customLogout")
+	@GetMapping(value = "/logout")
 	public void logoutGET() {
 		log.info("Custom Logout");
 	}

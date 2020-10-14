@@ -1,4 +1,4 @@
-package com.carrental.tt.security;
+package shop.carrental.tt.security;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,16 +10,17 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
-public class CustomAccessDeniedHandler implements AccessDeniedHandler {
+public class AccessDeniedHandlerImpl implements AccessDeniedHandler {
 
 	@Override
-	public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
+	public void handle(HttpServletRequest request, HttpServletResponse response,
+			AccessDeniedException accessDeniedException) throws IOException, ServletException {
 
 		log.error("Access Denied Handler");
 
 		log.error("Redirect....");
 
-		response.sendRedirect("/accessError");
+		response.sendRedirect("/common/error/accessError");
 
 	}
 

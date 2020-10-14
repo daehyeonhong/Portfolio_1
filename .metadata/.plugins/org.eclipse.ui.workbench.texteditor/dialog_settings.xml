@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="&quot;"/>
 			<item value="secu"/>
 			<item value="/resources/"/>
 			<item value="/resources/equipo/"/>
@@ -22,7 +23,6 @@
 			<item value="js/"/>
 			<item value="js"/>
 			<item value="css/"/>
-			<item value=",js/"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/equipo/"/>

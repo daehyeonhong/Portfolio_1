@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<context:component-scan base-package="com.carrental" />
+	<context:component-scan base-package="shop.carrental" />
 
 	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
@@ -53,8 +53,8 @@
 	Get SQLSessionFactory
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean"
 		p:dataSource-ref="dataSource"
-		p:configLocation="classpath:/com/carrental/config/mybatis-config.xml" />
+		p:configLocation="classpath:/shop/carrental/config/mybatis-config.xml" />
 
-	<mybatis-spring:scan base-package="com.carrental.mappers" /> -->
+	<mybatis-spring:scan base-package="shop.carrental.mappers" /> -->
 
 </beans>
