@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-10-13T18:24:19Z</updated>
+  <updated>2020-10-13T18:24:00Z</updated>
   <entry>
     <title>This Week in Spring - October 13th, 2020</title>
     <link rel="alternate" href="https://spring.io/blog/2020/10/13/this-week-in-spring-october-13th-2020" />
@@ -14,11 +14,11 @@
       <name>Josh Long</name>
     </author>
     <id>tag:spring.io,2020-10-13:4228</id>
-    <updated>2020-10-13T18:24:19Z</updated>
+    <updated>2020-10-13T18:24:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! There&amp;rsquo;s just so much to talk about this week and I scarcely know where to start so let&amp;rsquo;s just get into it.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/10/08/a-bootiful-podcast-reactor-team-engineer-fellow-java-champion-and-conference-organizer-audrey-neveu"&gt;A Bootiful Podcast: Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=bzoi2p0zgcq&amp;feature=share"&gt;A look at the Sentry Spring Boot starter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=BZOI2P0zgCQ&amp;feature=share"&gt;A look at the Sentry Spring Boot starter&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/theapachetomcat/status/1315584730667143169?s=12"&gt;Apache Tomcat 10.0.0-M9 (alpha) is out&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://useoptic.com/blog/optic-spring-usvc"&gt;Documenting Spring Boot Microservices with Optic&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2020/10/08/dr-b-talks-about-iot-and-edge-technology-in-open-source/"&gt;Dr. B Talks About IoT and Edge Technology in Open Source and Why It¡¯s Important&lt;/a&gt;&lt;/li&gt;

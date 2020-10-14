@@ -2,10 +2,12 @@ package shop.carrental.tt.security;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,40 +28,71 @@ public class MemberTests {
 	@Setter(onMethod_ = @Autowired)
 	private DataSource dataSource;
 
+	/* @Ignore */
 	@Test
 	public void testInsertMember() {
 		log.info("Change Password");
-		String sql = "INSERT INTO USERS(PASSWORD)VALUES(?)";
-		for (int i = 0; i < 100; i++) {
-			Connection connection = null;
-			PreparedStatement preparedStatement = null;
-			try {
-				connection = dataSource.getConnection();
-				preparedStatement = connection.prepareStatement(sql);
+		String sql = "UPDATE USERS SET PASSWORD=? WHERE USERNAME='user00'";
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		try {
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
 
-				preparedStatement.setString(2, passwordEncoder.encode("PASSWORD" + i));
-				preparedStatement.executeUpdate();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} finally {
-				if (preparedStatement != null) {
-					try {
-						preparedStatement.close();
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
+			preparedStatement.setString(1, passwordEncoder.encode("pw0"));
+			preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (preparedStatement != null) {
+				try {
+					preparedStatement.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
 				}
-				if (connection != null) {
-					try {
-						connection.close();
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
+			}
+			if (connection != null) {
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
 				}
 			}
 		}
+	}
 
+	@Test
+	public void testSelect() {
+		log.info("Select Test");
+		String sql = "SELECT*FROM USERS";
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		try {
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				log.info("USERNAME" + resultSet.getString(1));
+				log.info("PASSWORD" + resultSet.getString(2));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (preparedStatement != null) {
+				try {
+					preparedStatement.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (connection != null) {
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 }
