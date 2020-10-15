@@ -23,10 +23,9 @@
 					<h2>${logout}</h2>
 					<h2>${SPRING_SECURITY_403_EXCEPTION.getMessage()}</h2>
 					<h2>${msg}</h2>
-					<div class="wrap-input100 validate-input"
-						data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="username"
-							placeholder="username"> <span class="focus-input100-1"></span>
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="username" placeholder="username">
+						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 

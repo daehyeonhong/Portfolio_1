@@ -1,4 +1,4 @@
-package shop.carrental.tt.mapper;
+package shop.carrental.tt.mappers;
 
 import shop.carrental.tt.domain.MemberVO;
 

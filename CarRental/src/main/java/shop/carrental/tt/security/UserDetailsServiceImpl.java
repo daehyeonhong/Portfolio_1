@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import shop.carrental.tt.domain.MemberVO;
-import shop.carrental.tt.mapper.MemberMapper;
+import shop.carrental.tt.mappers.MemberMapper;
 import shop.carrental.tt.security.domain.UserImpl;
 
 @Log4j

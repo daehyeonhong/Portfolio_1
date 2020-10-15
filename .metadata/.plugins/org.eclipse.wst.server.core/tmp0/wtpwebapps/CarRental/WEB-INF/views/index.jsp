@@ -15,9 +15,12 @@
 				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
 					<div class="col-lg-9 ftco-animate text-center">
 						<div class="mt-5">
-							<h1 class="mb-4">Lease The Right Equipment For Your Job</h1>
-							<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-							<p><a href="#" class="btn btn-primary">Contact us</a> <a href="#" class="btn btn-white">Request A Quote</a></p>
+							<h1 class="mb-4">TT RENTAL</h1>
+							<p class="mb-4">asdasfasfasd</p>
+							<p>
+								<a href="/" class="btn btn-primary">장기 렌탈</a>
+								<a href="/" class="btn btn-white">단기 렌탈</a>
+							</p>
 						</div>
 					</div>
 				</div>

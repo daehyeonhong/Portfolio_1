@@ -1,5 +1,7 @@
 package shop.carrental.tt.controller;
 
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +18,7 @@ public class SampleController {
 	}
 
 	@GetMapping(value = "/member")
+	@PreAuthorize("isAuthenticated()")
 	public void member() {
 		log.info("Logined Member");
 	}
@@ -25,4 +28,15 @@ public class SampleController {
 		log.info("Admin Only");
 	}
 
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_MEMBER')")
+	@GetMapping("/annoMemer")
+	public void member2() {
+		log.info("Logined Annotation Member");
+	}
+
+	@Secured({ "ROLE_ADMIN" })
+	@GetMapping("/annoAdmin")
+	public void admin2() {
+		log.info("Admin Annotation Only");
+	}
 }
