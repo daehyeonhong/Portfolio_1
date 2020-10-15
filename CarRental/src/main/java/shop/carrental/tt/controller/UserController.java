@@ -28,7 +28,7 @@ public class UserController {
 
 	@GetMapping(value = "/logout")
 	public void logoutGET() {
-		log.info("Custom Logout");
+		log.info("Logout");
 	}
 
 }

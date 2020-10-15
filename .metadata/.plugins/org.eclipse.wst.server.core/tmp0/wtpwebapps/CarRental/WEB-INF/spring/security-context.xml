@@ -8,19 +8,19 @@
 	<bean id="accessDenied" class="shop.carrental.tt.security.AccessDeniedHandlerImpl"/>
 	<bean id="loginSuccess" class="shop.carrental.tt.security.LoginSuccessHandlerImpl"/>
 	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	<bean id="userDetailsService" class="shop.carrental.tt.security.UserDetailsServiceImpl" />
 
-	<security:http auto-config="true" use-expressions="true">
+<!-- 	<security:http auto-config="true" use-expressions="true">
 		<security:intercept-url pattern="/sample/all" access="permitAll" />
 		<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')" />
 		<security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')" />
 		<security:form-login login-page="/user/login" authentication-success-handler-ref="loginSuccess" />
 		<security:access-denied-handler ref="accessDenied" />
 		<security:logout logout-url="/user/logout" invalidate-session="true" />
-	</security:http>
+	</security:http> -->
 
 	<security:authentication-manager>
-		<security:authentication-provider>
-			<security:jdbc-user-service data-source-ref="dataSource"/>
+		<security:authentication-provider user-service-ref="userDetailsService">
 			<security:password-encoder ref="bcryptPasswordEncoder" />
 		</security:authentication-provider>
 	</security:authentication-manager>

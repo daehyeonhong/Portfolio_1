@@ -17,4 +17,9 @@
 		<!-- <setting name="callSettersOnNulls" value="true" /> -->
 	</settings>
 
+	<typeAliases>
+		<typeAlias alias="authVO" type="shop.carrental.tt.domain.AuthVO" />
+		<typeAlias alias="memberVO" type="shop.carrental.tt.domain.MemberVO" />
+	</typeAliases>
+
 </configuration>

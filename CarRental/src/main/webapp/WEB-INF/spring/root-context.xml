@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<context:component-scan base-package="shop.carrental" />
+	<context:component-scan base-package="shop.carrental.tt" />
 
 	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
@@ -24,7 +24,7 @@
 	<!-- Configuration Hirkari -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig"
 		p:driverClassName="oracle.jdbc.OracleDriver"
-		p:jdbcUrl="jdbc:oracle:thin:@localhost:1521:orcl" p:username="portfolio"
+		p:jdbcUrl="jdbc:oracle:thin:@localhost:1521:xe" p:username="portfolio"
 		p:password="1234"
 		 />
 <!-- 		p:connectionTestQuery="${properti.hikari.connectionTestQuery}"
@@ -51,10 +51,9 @@
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close" c:configuration-ref="hikariConfig" />
 
 	<!-- Get SQLSessionFactory -->
-	<!-- <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean"
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean"
 		p:dataSource-ref="dataSource"
-		p:configLocation="classpath:/com/carrental/config/mybatis-config.xml" />
-
-	<mybatis-spring:scan base-package="shop.carrental.mappers" /> -->
+		p:configLocation="classpath:/shop/carrental/tt/config/mybatis-config.xml" />
+	<mybatis-spring:scan base-package="shop.carrental.tt.mapper" />
 
 </beans>
