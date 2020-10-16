@@ -94,4 +94,4 @@ hs_err_pid*
 target/
 
 # Servers #
-Servers/
+[sS]ervers/
