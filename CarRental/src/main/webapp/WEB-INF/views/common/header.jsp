@@ -20,6 +20,9 @@
 						<a href="/short/inlandList" class="nav-link">단기 렌탈</a>
 					</li>
 					<sec:authorize access="isAnonymous()">
+						<li class="nav-item">
+							<a href="/user/login" class="nav-link">LOGIN</a>
+						</li>
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
 						<li class="nav-item">

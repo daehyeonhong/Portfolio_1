@@ -9,3 +9,4 @@
 <link rel="stylesheet" href="/resources/equipo/css/flaticon.css" />
 <link rel="stylesheet" href="/resources/equipo/css/animate.css" />
 <link rel="stylesheet" href="/resources/equipo/css/style.css" />
+<link rel="icon" type="image/png" href="/resources/favicon/favicon.ico" />
