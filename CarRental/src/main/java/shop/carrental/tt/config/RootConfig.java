@@ -22,8 +22,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import lombok.Setter;
 
 @Configuration
-@ComponentScan(basePackages = { "shop.carrental.tt.service" }, includeFilters = @Filter({ Controller.class,
-		Service.class }), useDefaultFilters = false)
+@ComponentScan(basePackages = { "shop.carrental.tt.service" }, includeFilters = @Filter({ Controller.class, Service.class }), useDefaultFilters = false)
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
 @MapperScan(basePackages = { "shop.carrental.tt.mappers" })
@@ -72,8 +71,7 @@ public class RootConfig {
 	public SqlSessionFactory sqlSessionFactory() throws Exception {
 		SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
 		sqlSessionFactory.setDataSource(dataSource());
-		sqlSessionFactory.setConfigLocation(
-				applicationContext.getResource("classpath:/shop/carrental/tt/config/mybatis-config.xml"));
+		sqlSessionFactory.setConfigLocation(applicationContext.getResource("classpath:/shop/carrental/tt/config/mybatis-config.xml"));
 		return (SqlSessionFactory) sqlSessionFactory.getObject();
 	}
 
