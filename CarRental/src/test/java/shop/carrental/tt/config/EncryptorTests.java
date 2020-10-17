@@ -32,21 +32,28 @@ public class EncryptorTests {
 		log.info("str ==> " + str + ", enc ==> " + enc + ", dec ==> " + dec);
 	}
 
+	@Test
 	public void checkSupportAlgorithm() {
 		List<Object> supported = new ArrayList<Object>();
 		List<Object> unSupported = new ArrayList<Object>();
 		for (Object algorithm : AlgorithmRegistry.getAllPBEAlgorithms()) {
-			StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-			encryptor.setPassword("1234");
-			encryptor.setAlgorithm(String.valueOf(algorithm));
+			try {
+				StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
+				encryptor.setPassword("1234");
+				encryptor.setAlgorithm(String.valueOf(algorithm));
 
-			String str = "testString";
-			String enc = encryptor.encrypt(str);
-			String dec = encryptor.decrypt(enc);
-			assertTrue(str.equals(dec));
+				String str = "testString";
+				String enc = encryptor.encrypt(str);
+				String dec = encryptor.decrypt(enc);
+				assertTrue(str.equals(dec));
+				supported.add(algorithm);
+			} catch (Exception e) {
+				unSupported.add(algorithm);
+			}
 		}
 	}
 
+	@Ignore
 	@Test
 	public void encryptSimpleTest() {
 		PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
