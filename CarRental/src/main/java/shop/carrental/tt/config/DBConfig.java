@@ -10,71 +10,89 @@ import org.apache.ibatis.type.TypeHandlerRegistry;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AdviceMode;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import net.sf.log4jdbc.sql.jdbcapi.DriverSpy;
+import lombok.Setter;
 
 @Configuration
 @EnableTransactionManagement(mode = AdviceMode.PROXY, order = 0)
 public class DBConfig {
 
-	@Autowired
-	private Environment environment;
+	@Setter(onMethod_ = @Autowired)
+	ApplicationContext applicationContext;
+
+	@Value("${dataSource.url}")
+	private String jdbcUrl;
+	@Value("${dataSource.driverClassName}")
+	private String driverClassName;
+	@Value("${dataSource.user}")
+	private String user;
+	@Value("${dataSource.password}")
+	private String password;
+	@Value("${hikari.connectionTestQuery}")
+	private String connecttionTestQuery;
+	@Value("${hikari.maximumPoolSize}")
+	private int maximumPoolSize;
+	@Value("${hikari.idleTimeout}")
+	private long idleTimeout;
+	@Value("${hikari.maxLifetime}")
+	private long maxLifeTime;
+	@Value("${hikari.connectionTimeout}")
+	private long connectionTimeout;
+
+	@Bean
+	public HikariConfig hikariConfig() {
+		HikariConfig hikariConfig = new HikariConfig();
+		hikariConfig.setDriverClassName(driverClassName);
+		hikariConfig.setJdbcUrl(jdbcUrl);
+		hikariConfig.setUsername(user);
+		hikariConfig.setPassword(password);
+		hikariConfig.setConnectionTestQuery(connecttionTestQuery);
+		hikariConfig.setMaximumPoolSize(maximumPoolSize);
+		hikariConfig.setIdleTimeout(idleTimeout);
+		hikariConfig.setMaxLifetime(maxLifeTime);
+		hikariConfig.setConnectionTimeout(connectionTimeout);
+		return hikariConfig;
+	}
 
 	@Bean(destroyMethod = "close")
 	public HikariDataSource hikariDataSource() {
-		HikariConfig hikariConfig = new HikariConfig();
-		hikariConfig.setDataSourceClassName(DriverSpy.class.getName());
-		hikariConfig.setJdbcUrl(environment.getProperty("dataSource.url"));
-		hikariConfig.setUsername(environment.getProperty("dataSource.user"));
-		hikariConfig.setPassword(environment.getProperty("dataSource.password"));
-		hikariConfig.setConnectionTestQuery(environment.getProperty("hikari.connectionTestQuery"));
-		hikariConfig.setMaximumPoolSize(Integer.parseInt(environment.getProperty("hikari.maximumPoolSize")));
-		hikariConfig.setIdleTimeout(Long.parseLong(environment.getProperty("hikari.idleTimeout")));
-		hikariConfig.setMaxLifetime(Long.parseLong(environment.getProperty("hikari.maxLifetime")));
-		hikariConfig.setConnectionTimeout(Long.parseLong(environment.getProperty("hikari.connectionTimeout")));
-		return new HikariDataSource(hikariConfig);
+		return new HikariDataSource(hikariConfig());
 	}
 
 	@Bean
-	public DataSource dataSource(HikariDataSource hikariDataSource) {
-		return new LazyConnectionDataSourceProxy(hikariDataSource);
+	public DataSource dataSource() {
+		return new LazyConnectionDataSourceProxy(hikariDataSource());
 	}
 
 	@Bean
-	public DataSourceTransactionManager transactionManager(DataSource dataSource) {
-		DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(dataSource);
-		return dataSourceTransactionManager;
-	}
-
-	@Bean
-	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
-		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-		sqlSessionFactoryBean.setDataSource(dataSource);
-		PathMatchingResourcePatternResolver resourcePatternResolver = new PathMatchingResourcePatternResolver();
-		sqlSessionFactoryBean.setConfigLocation(
-				resourcePatternResolver.getResource("classpath:/shop/carrental/tt/config/mybatis-config.xml"));
-		sqlSessionFactoryBean.setMapperLocations(resourcePatternResolver.getResources("classpath*:mappers/*.xml"));
-		TypeHandlerRegistry typeHandlerRegistry = sqlSessionFactoryBean.getObject().getConfiguration()
-				.getTypeHandlerRegistry();
+	public SqlSessionFactory sqlSessionFactory() throws Exception {
+		SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+		sqlSessionFactory.setDataSource(dataSource());
+		sqlSessionFactory.setConfigLocation(applicationContext.getResource("classpath:/shop/carrental/tt/config/mybatis-config.xml"));
+		TypeHandlerRegistry typeHandlerRegistry = sqlSessionFactory.getObject().getConfiguration().getTypeHandlerRegistry();
 		typeHandlerRegistry.register(Timestamp.class, DateTypeHandler.class);
 		typeHandlerRegistry.register(Time.class, DateTypeHandler.class);
 		typeHandlerRegistry.register(Date.class, DateTypeHandler.class);
-		return sqlSessionFactoryBean.getObject();
+		return (SqlSessionFactory) sqlSessionFactory.getObject();
+	}
+
+	@Bean
+	public DataSourceTransactionManager transactionManager() {
+		return new DataSourceTransactionManager(dataSource());
 	}
 
 	@Bean(destroyMethod = "clearCache")
-	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
-		SqlSessionTemplate sessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
+	public SqlSessionTemplate sqlSessionTemplate() throws Exception {
+		SqlSessionTemplate sessionTemplate = new SqlSessionTemplate(sqlSessionFactory());
 		return sessionTemplate;
 	}
 
