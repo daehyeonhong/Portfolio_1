@@ -16,4 +16,3 @@
 		</div>
 	</div>
 </section>
-<script src="/resources/js/main.js"></script>
