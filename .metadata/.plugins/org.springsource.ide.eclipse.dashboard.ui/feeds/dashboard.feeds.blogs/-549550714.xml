@@ -5,7 +5,22 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-10-26T16:52:09Z</updated>
+  <updated>2020-10-27T14:31:23Z</updated>
+  <entry>
+    <title>Spring Framework 5.2.10 and 5.1.19 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/10/27/spring-framework-5-2-10-and-5-1-19-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>St?phane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2020-10-27:4239</id>
+    <updated>2020-10-27T14:31:23Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;5.2.10&lt;/code&gt; and &lt;code&gt;5.1.19&lt;/code&gt; are available now.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.2.10&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.2.10.RELEASE"&gt;27 fixes and improvements&lt;/a&gt;. Spring Framework 5.1.19 includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.1.19.RELEASE"&gt;16 selected fixes and improvements&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Stay tuned for Spring Framework 5.3 GA and follow-up Spring Boot releases &lt;code&gt;2.1.18&lt;/code&gt;, &lt;code&gt;2.2.11&lt;/code&gt;, &lt;code&gt;2.3.5&lt;/code&gt;, and &lt;code&gt;2.4.0-RC1&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.2.10.RELEASE/spring-framework-reference"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Case Study: Aggregator Function and Processor</title>
     <link rel="alternate" href="https://spring.io/blog/2020/10/26/case-study-aggregator-function-and-processor" />
@@ -1180,28 +1195,6 @@ azure.cosmos.primary.key=your-primary-cosmosDb-key
   &lt;li&gt;&lt;a href="https://inside.java/2020/09/29/new-candidate-jep393/"&gt;New candidate JEP: 393: Foreign-Memory Access API (3rd Incubator)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/09/24/venkat-subramaniam-interview/"&gt;Venkat Subramaniam: Java is changing in a responsible manner&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow 2.7.0-M1 and 2.6.3 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/09/29/spring-cloud-data-flow-2-7-0-m1-and-2-6-3-released" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Ilayaperumal Gopinathan</name>
-    </author>
-    <id>tag:spring.io,2020-09-29:4217</id>
-    <updated>2020-09-29T17:53:12Z</updated>
-    <content type="html">&lt;p&gt;Spring Cloud Data Flow team is pleased to announce the release of 2.7.0-M1 and 2.6.3&lt;/p&gt;
-&lt;p&gt;While the release 2.6.3 has &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/releases/tag/v2.6.3"&gt;the bug fixes&lt;/a&gt;, the first milestone of 2.7.0 has the following enhancements:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SCDF dashboard re-design using VMware Clarity toolkit&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;SCDF dashboard is re-designed using &lt;a href="https://clarity.design/"&gt;VMware Clarity design system&lt;/a&gt;. This is a complete rewrite of SCDF dashboard GUI to get the benefits of the Clarity design.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Spring Boot 2.3.2 Update&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;SCDF server components are now updated to use Spring Boot 2.3.2 release.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Wavefront integration&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Spring Cloud Data Flow dashboards for streams, tasks and SCDF server components are available in VMware Wavefront dashboards for integrations. The configurations required to setup the wavefront integration are simplified at the SCDF as well. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Deprecation of Helm Hub Chart&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Helm charts for SCDF are now deprecated and moved into &lt;a href="https://github.com/bitnami/charts/tree/master/bitnami/spring-cloud-dataflow"&gt;Bitnami OSS charts&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
-&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stack Overflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

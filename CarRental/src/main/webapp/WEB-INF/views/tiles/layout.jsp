@@ -3,9 +3,9 @@
 <html>
 <head>
 <title>어쩌고 렌터카</title>
-<tiles:insertAttribute name="css" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
+<tiles:insertAttribute name="css" />
 <body>
 	<div id="header">
 		<tiles:insertAttribute name="header" />
@@ -19,6 +19,6 @@
 	<div id="loader">
 		<tiles:insertAttribute name="loader" />
 	</div>
-</body>
 <tiles:insertAttribute name="script" />
+</body>
 </html>
