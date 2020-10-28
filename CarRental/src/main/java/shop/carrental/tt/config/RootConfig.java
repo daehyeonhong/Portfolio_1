@@ -12,6 +12,4 @@ import org.springframework.stereotype.Service;
 @ComponentScan(basePackages = { "shop.carrental.tt.service" }, includeFilters = @Filter({ Controller.class, Service.class }), useDefaultFilters = false)
 @MapperScan(basePackages = { "shop.carrental.tt.mappers" })
 @Import({ PropertiesConfig.class, DBConfig.class, MailConfig.class })
-public class RootConfig {
-
-}
+public class RootConfig {}

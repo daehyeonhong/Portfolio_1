@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <header>
-	<%@ include file="/WEB-INF/views/common/info.jsp"%>
+	<%@ include file="/WEB-INF/views/layout/info.jsp"%>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container d-flex align-items-center">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +27,10 @@
 					<sec:authorize access="isAuthenticated()">
 						<li class="nav-item">
 							<a href="/" class="nav-link" id="logoutBtn" onclick="logout()">LOGOUT</a>
-							<form id="logoutForm" action="/logout" method="post" role="form">
-								<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-							</form>
 						</li>
+						<form id="logoutForm" action="/logout" method="post" role="form">
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+						</form>
 					</sec:authorize>
 					<li class="nav-item">
 						<a href="/customer/notice/list" class="nav-link">고객센터</a>
