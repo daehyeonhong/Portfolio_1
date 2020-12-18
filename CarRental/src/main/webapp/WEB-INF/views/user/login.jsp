@@ -6,6 +6,7 @@
 </head>
 <body>
 	<%@ include file="/WEB-INF/views/common/header.jsp"%>
+	
 	<article>
 		<div class="limiter">
 			<div class="container-login100">
