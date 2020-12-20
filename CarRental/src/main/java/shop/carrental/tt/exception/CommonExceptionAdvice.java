@@ -14,7 +14,7 @@ public class CommonExceptionAdvice {
 	@ExceptionHandler(NoHandlerFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public String except(NoHandlerFoundException ex) {
-		log.error("Exception :==> " + ex.getMessage());
+		log.error("Exception ==> " + ex.getMessage());
 		return "/common/error/404";
 	}
 
