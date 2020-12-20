@@ -95,3 +95,6 @@ target/
 
 # Servers #
 [sS]ervers/
+
+# reCAPTCHA #
+reCAPTCHA/
