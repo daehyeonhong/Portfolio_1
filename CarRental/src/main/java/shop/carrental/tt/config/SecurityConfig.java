@@ -15,7 +15,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.firewall.DefaultHttpFirewall;
 import org.springframework.security.web.firewall.HttpFirewall;
-
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import shop.carrental.tt.security.LoginSuccessHandlerImpl;
@@ -58,14 +57,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.logout().logoutUrl("/logout").invalidateHttpSession(true);
 	}
 
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.httpFirewall(defaultHttpFirewall());
-	}
-
-	@Bean
-	public HttpFirewall defaultHttpFirewall() {
-		return new DefaultHttpFirewall();
-	}
+	/*
+	 * @Override public void configure(WebSecurity web) throws Exception {
+	 * web.httpFirewall(defaultHttpFirewall()); }
+	 * 
+	 * @Bean public HttpFirewall defaultHttpFirewall() { return new
+	 * DefaultHttpFirewall(); }
+	 */
 
 }

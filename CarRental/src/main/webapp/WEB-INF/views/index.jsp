@@ -7,28 +7,8 @@
 </head>
 
 <body>
-<%@include file="/WEB-INF/views/common/loader.jsp"%>
-<%@include file="/WEB-INF/views/common/header.jsp"%>
-	<!-- Hero Section Begin -->
-	<section class="hero-section set-bg" data-setbg="/resources/basic/img/hero.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<div class="hero-text">
-						<span>5 to 9 may 2019, mardavall hotel, New York</span>
-						<h2>
-							Change Your Mind<br /> To Become Sucess
-						</h2>
-						<a href="#" class="primary-btn">Buy Ticket</a>
-					</div>
-				</div>
-				<div class="col-lg-5">
-					<img src="/resources/basic/img/hero-right.png" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Hero Section End -->
+<%@include file="/WEB-INF/views/module/loader.jsp"%>
+<%@include file="/WEB-INF/views/module/header.jsp"%>
 
 	<!-- Counter Section Begin -->
 	<section class="counter-section bg-gradient">
@@ -66,6 +46,26 @@
 		</div>
 	</section>
 	<!-- Counter Section End -->
+	<!-- Hero Section Begin -->
+	<section class="hero-section set-bg" data-setbg="/resources/basic/img/hero.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="hero-text">
+						<span>5 to 9 may 2019, mardavall hotel, New York</span>
+						<h2>
+							Change Your Mind<br /> To Become Sucess
+						</h2>
+						<a href="#" class="primary-btn">Buy Ticket</a>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<img src="/resources/basic/img/hero-right.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero Section End -->
 
 	<!-- Home About Section Begin -->
 	<section class="home-about-section spad">
@@ -1079,7 +1079,7 @@
 		</div>
 	</section>
 	<!-- Contact Section End -->
-<%@include file="/WEB-INF/views/common/footer.jsp"%>
+<%@include file="/WEB-INF/views/module/footer.jsp"%>
 <%@include file="/WEB-INF/module/basic/js.jsp"%>
 </body>
 </html>
