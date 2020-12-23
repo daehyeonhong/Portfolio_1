@@ -23,7 +23,7 @@ import shop.carrental.tt.security.UserDetailsServiceImpl;
 @Configuration
 @EnableWebSecurity
 @Log4j
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfigBU extends WebSecurityConfigurerAdapter {
 
 	@Setter(onMethod_ = @Autowired)
 	private DataSource dataSource;
@@ -34,11 +34,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	@Bean
-	public HttpFirewall defaultHttpFirewall() {
-		return new DefaultHttpFirewall();
-	}
-
-	@Bean
 	public AuthenticationSuccessHandler loginSuccessHandler() {
 		return new LoginSuccessHandlerImpl();
 	}
@@ -46,11 +41,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
-	}
-
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.httpFirewall(defaultHttpFirewall());
 	}
 
 	@Override
@@ -66,5 +56,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		http.logout().logoutUrl("/logout").invalidateHttpSession(true);
 	}
+
+	/*
+	 * @Override public void configure(WebSecurity web) throws Exception {
+	 * web.httpFirewall(defaultHttpFirewall()); }
+	 * 
+	 * @Bean public HttpFirewall defaultHttpFirewall() { return new
+	 * DefaultHttpFirewall(); }
+	 */
 
 }

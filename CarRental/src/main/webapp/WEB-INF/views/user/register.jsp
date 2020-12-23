@@ -27,6 +27,7 @@
 			<div class="row">
 				<div class="col-lg-8 container">
 					<form action="/user/register" class="comment-form contact-form" method="post">
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						<div class="row">
 							<div class="col-lg-8">
 								<input type="text" name="username" placeholder="ID">
