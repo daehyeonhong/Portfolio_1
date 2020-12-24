@@ -22,7 +22,8 @@
 					<li ${path=='/long/list' ? 'class="active"' : '' }>
 						<a href="/long/list">LongTerm</a>
 					</li>
-					<li><a href="./speaker.html">Customer Service</a>
+					<li ${path=='/sample/notice' ? 'class="active"' : '' }>
+						<a href="/sample/notice">Customer Service</a>
 						<ul class="dropdown">
 							<li><a href="#">Jayden</a></li>
 							<li><a href="#">Sara</a></li>

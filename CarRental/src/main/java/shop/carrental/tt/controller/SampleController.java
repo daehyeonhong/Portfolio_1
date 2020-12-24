@@ -16,6 +16,11 @@ public class SampleController {
 	public void all() {
 		log.info("All Can Access Everybody");
 	}
+	
+	@GetMapping(value = "/notice")
+	public void notice() {
+		log.info("Notice");
+	}
 
 	@GetMapping(value = "/member")
 	@PreAuthorize("isAuthenticated()")
