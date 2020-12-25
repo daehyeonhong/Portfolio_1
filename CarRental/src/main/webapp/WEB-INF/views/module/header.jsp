@@ -14,16 +14,16 @@
 			<nav class="mainmenu mobile-menu">
 				<ul>
 					<li ${path=='/' ? 'class="active"' : '' }>
-						<a href="/">Home</a>
+						<a href="/">홈</a>
 					</li>
 					<li ${path=='/short/list' ? 'class="active"' : '' }>
-						<a href="/short/list">ShortTerm</a>
+						<a href="/short/list">단기렌탈</a>
 					</li>
 					<li ${path=='/long/list' ? 'class="active"' : '' }>
-						<a href="/long/list">LongTerm</a>
+						<a href="/long/list">장기렌탈</a>
 					</li>
 					<li ${path=='/sample/notice' ? 'class="active"' : '' }>
-						<a href="/sample/notice">Customer Service</a>
+						<a href="/sample/notice">공지사항↡</a>
 						<ul class="dropdown">
 							<li><a href="#">Jayden</a></li>
 							<li><a href="#">Sara</a></li>
@@ -34,9 +34,7 @@
 				</ul>
 			</nav>
 			<sec:authorize access="isAnonymous()">
-				<a href="/user/login" class="primary-btn top-btn">
-					Login
-				</a>
+				<a href="/user/login" class="primary-btn top-btn">로그인</a>
 			</sec:authorize>
 			<sec:authorize access="isAuthenticated()">
 				<a href="/" class="primary-btn top-btn" id="logoutBtn" onclick="logout()">

@@ -1600,7 +1600,8 @@ ol {
 
 .schedule-table-tab .schedule-table-content table thead tr th {
 	border-right: 1px solid #e5e5e5;
-	padding: 24px 0 26px;
+	/* padding: 24px 0 26px; */
+	padding: 10px 0 10px;
 }
 
 .schedule-table-tab .schedule-table-content table thead tr th strong {
@@ -1623,15 +1624,15 @@ ol {
 
 .schedule-table-tab .schedule-table-content table tbody tr td {
 	border-right: 1px solid #e5e5e5;
-	width: 260px;
-	height: 134px;
-	padding: 37px 0 36px;
+	/* width: 260px; */
+	height: 30px;
+	padding: 10px 0 10px;
 }
 
 .schedule-table-tab .schedule-table-content table tbody tr td h5 {
 	color: #171822;
 	font-weight: 600;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 }
 
 .schedule-table-tab .schedule-table-content table tbody tr td p {

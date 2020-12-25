@@ -4,9 +4,8 @@
 <html lang="zxx">
 
 <head>
-<title>Please Insert Title</title>
+<title>공지사항</title>
 <%@include file="/WEB-INF/module/basic/css.jsp"%>
-<%@include file="/WEB-INF/module/table/css.jsp"%>
 </head>
 
 <body>
@@ -32,155 +31,65 @@
 	<!-- Breadcrumb Section End -->
 
 	<!-- Schedule Table Section Begin -->
-	<div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-					<div class="table">
-
-						<div class="row header">
-							<div class="cell">
-								Full Name
-							</div>
-							<div class="cell">
-								Age
-							</div>
-							<div class="cell">
-								Job Title
-							</div>
-							<div class="cell">
-								Location
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Vincent Williamson
-							</div>
-							<div class="cell" data-title="Age">
-								31
-							</div>
-							<div class="cell" data-title="Job Title">
-								iOS Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Washington
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Joseph Smith
-							</div>
-							<div class="cell" data-title="Age">
-								27
-							</div>
-							<div class="cell" data-title="Job Title">
-								Project Manager
-							</div>
-							<div class="cell" data-title="Location">
-								Somerville, MA
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Justin Black
-							</div>
-							<div class="cell" data-title="Age">
-								26
-							</div>
-							<div class="cell" data-title="Job Title">
-								Front-End Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Los Angeles
+	<section class="schedule-table-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="schedule-table-tab">
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="nav-item"><a class="nav-link active"
+								data-toggle="tab" href="#tabs-1" role="tab">Marketing</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab"
+								href="#tabs-2" role="tab">Business</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab"
+								href="#tabs-3" role="tab">Technology</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab"
+								href="#tabs-4" role="tab">Experience</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab"
+								href="#tabs-5" role="tab">Event</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="tabs-1" role="tabpanel">
+								<div class="schedule-table-content">
+									<table>
+										<thead>
+											<tr>
+												<th><span>글번호</span></th>
+												<th><span>분류</span></th>
+												<th><span>제목</span></th>
+												<th><span>조회수</span></th>
+												<th><span>작성일</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<c:forEach begin="0" end="4">
+												<tr>
+													<td>1</td>
+													<td>기본</td>
+													<td class="hover-bg">
+														<a href="#">
+															제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다
+														</a>
+													</td>
+													<td>3</td>
+													<td>2020-10-12</td>
+												</tr>
+											</c:forEach>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Sean Guzman
-							</div>
-							<div class="cell" data-title="Age">
-								25
-							</div>
-							<div class="cell" data-title="Job Title">
-								Web Designer
-							</div>
-							<div class="cell" data-title="Location">
-								San Francisco
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Keith Carter
-							</div>
-							<div class="cell" data-title="Age">
-								20
-							</div>
-							<div class="cell" data-title="Job Title">
-								Graphic Designer
-							</div>
-							<div class="cell" data-title="Location">
-								New York, NY
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Austin Medina
-							</div>
-							<div class="cell" data-title="Age">
-								32
-							</div>
-							<div class="cell" data-title="Job Title">
-								Photographer
-							</div>
-							<div class="cell" data-title="Location">
-								New York
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Vincent Williamson
-							</div>
-							<div class="cell" data-title="Age">
-								31
-							</div>
-							<div class="cell" data-title="Job Title">
-								iOS Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Washington
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Joseph Smith
-							</div>
-							<div class="cell" data-title="Age">
-								27
-							</div>
-							<div class="cell" data-title="Job Title">
-								Project Manager
-							</div>
-							<div class="cell" data-title="Location">
-								Somerville, MA
-							</div>
-						</div>
-
 					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 	<!-- Schedule Table Section End -->
 </article>
 
 <%@include file="/WEB-INF/views/module/footer.jsp"%>
-<%@include file="/WEB-INF/module/table/js.jsp"%>
 <%@include file="/WEB-INF/module/basic/js.jsp"%>
 </body>
 </html>
