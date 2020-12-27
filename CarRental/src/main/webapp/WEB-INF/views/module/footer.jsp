@@ -2,7 +2,7 @@
 <!-- Footer Section Begin -->
 <footer class="footer-section">
 	<div class="container">
-		<div class="partner-logo owl-carousel">
+		<div class="partner-logo  owl-carousel">
 			<a href="#" class="pl-table">
 				<div class="pl-tablecell">
 					<img src="/resources/basic/img/partner-logo/logo-1.png" alt="">
