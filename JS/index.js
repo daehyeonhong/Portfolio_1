@@ -47,3 +47,5 @@ const myInfo = {
 };
 console.log(++myInfo.age);
 console.log(myInfo.favFood[0].name);
+console.log(console);
+console.log(console.log);
