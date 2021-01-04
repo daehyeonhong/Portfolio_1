@@ -24,3 +24,6 @@ console.log(calculator.plus(5, 5));
 console.log(calculator.subtract(5, 5));
 console.log(calculator.multiple(5, 5));
 console.log(calculator.divide(5, 5));
+
+const title = document.getElementById('title');
+console.log(title);
