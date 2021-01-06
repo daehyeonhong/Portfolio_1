@@ -26,5 +26,14 @@ console.log(calculator.multiple(5, 5));
 console.log(calculator.divide(5, 5));
 
 const title = document.getElementById('title');
-console.log(title); s
+console.log(title);
+
+console.error('asd');
+console.dir(title);
+title.innerHTML = 'Hi! From JavaScript';
+title.style.color = 'red';
+console.dir(document);
+document.title = 'I own you yow';
 // DOM Document Object Module
+
+const quert = document.querySelector('#title');
