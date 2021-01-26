@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.carrental.mappers.MemberMapper">
+
+	<resultMap type="memberVO" id="memberMap">
+		<id property="user_id" column="user_id" />
+		<result property="user_password" column="user_password" />
+		<result property="user_name" column="user_name" />
+		<result property="enabled" column="enabled" />
+		<result property="user_reg_date" column="user_reg_date" />
+		<result property="user_update" column="user_update" />
+		<collection property="authList" resultMap="authMap" />
+	</resultMap>
+
+	<resultMap type="authVO" id="authMap">
+		<id property="user_id" column="user_id" />
+		<result property="authority" column="authority" />
+	</resultMap>
+
+	<select id="read" resultMap="memberMap">
+		<![CDATA[
+			SELECT
+				M.USER_ID,USER_PASSWORD,USER_NAME,ENABLED,USER_REG_DATE,USER_UPDATE,AUTHORITY
+			FROM
+				MEMBER M LEFT OUTER JOIN MEMBER_AUTH A ON M.USER_ID=A.USER_ID
+			WHERE M.USER_ID=#{user_id}
+		]]>
+	</select>
+
+</mapper>

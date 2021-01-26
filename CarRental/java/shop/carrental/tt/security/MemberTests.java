@@ -1,4 +1,4 @@
-package shop.carrental.tt.security;
+package shop.carrental.security;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
