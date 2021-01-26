@@ -19,7 +19,7 @@
 
 	<typeAliases>
 		<typeAlias alias="authVO" type="shop.carrental.domain.AuthVO" />
-		<typeAlias alias="memberVO" type="shop.carrental.domain.MemberVO" />
+		<typeAlias alias="UserVO" type="shop.carrental.domain.UserVO" />
 	</typeAliases>
 
 </configuration>

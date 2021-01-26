@@ -5,13 +5,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
+import shop.carrental.domain.UserVO;
+import shop.carrental.service.UserService;
 
 @Log4j
 @Controller
+@AllArgsConstructor
 @RequestMapping(value = "/user/*")
 public class UserController {
+
+	private UserService userService;
 
 	@GetMapping(value = "/login")
 	public void loginInput(String error, String logout, Model model) {
@@ -38,10 +43,9 @@ public class UserController {
 	}
 
 	@PostMapping(value = "/register")
-	public String registers() {
-
+	public String registers(UserVO userVO) {
 		log.info("Registers");
-
+		userService.register(userVO);
 		return "redirect:/user/login";
 	}
 

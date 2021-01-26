@@ -19,7 +19,7 @@ import lombok.extern.log4j.Log4j;
 @ContextConfiguration({ "file:src/main/webapp/WEB-INF/spring/root-context.xml",
 		"file:src/main/webapp/WEB-INF/spring/security-context.xml" })
 @Log4j
-public class MemberTests {
+public class UserTests {
 
 	@Setter(onMethod_ = @Autowired)
 	private PasswordEncoder passwordEncoder;
@@ -28,8 +28,8 @@ public class MemberTests {
 
 	@Ignore
 	@Test
-	public void testInsertMember() {
-		log.info("InsertMember");
+	public void testInsertUser() {
+		log.info("InsertUser");
 		String sql = "INSERT INTO MEMBER(USER_ID,USER_PASSWORD,USER_NAME)VALUES(?,?,?)";
 		int j = 0;
 		int k = 0;
@@ -130,8 +130,8 @@ public class MemberTests {
 
 	@Ignore
 	@Test
-	public void testSelectMember() {
-		log.info("Select Member Test");
+	public void testSelectUser() {
+		log.info("Select User Test");
 		String sql = "SELECT*FROM MEMBER";
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -166,8 +166,8 @@ public class MemberTests {
 
 	@Ignore
 	@Test
-	public void testSelectMemberAuth() {
-		log.info("Select Member Auth Test");
+	public void testSelectUserAuth() {
+		log.info("Select User Auth Test");
 		String sql = "SELECT*FROM MEMBER_AUTH";
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

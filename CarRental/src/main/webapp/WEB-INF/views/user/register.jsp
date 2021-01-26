@@ -30,19 +30,22 @@
 						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						<div class="row">
 							<div class="col-lg-8">
-								<input type="text" name="username" placeholder="ID">
+								<input type="text" name="user_id" placeholder="ID">
 							</div>
 							<div class="col-lg-4">
 								<input type="hidden" placeholder="Email">
 							</div>
 							<div class="col-lg-4">
-								<input type="password" placeholder="Password">
+								<input type="password" name="user_password" placeholder="Password">
 							</div>
 							<div class="col-lg-4">
 								<input type="password" placeholder="Password">
 							</div>
 							<div class="col-lg-4">
 								<input type="hidden" placeholder="Phone">
+							</div>
+							<div class="col-lg-4">
+								<input type="text" name="user_name" placeholder="name">
 							</div>
 							<div class="col-lg-12 text-center">
 								<textarea placeholder="Messages"></textarea>
