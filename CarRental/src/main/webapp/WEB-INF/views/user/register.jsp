@@ -33,19 +33,28 @@
 								<input type="text" name="user_id" placeholder="ID">
 							</div>
 							<div class="col-lg-4">
-								<input type="hidden" placeholder="Email">
-							</div>
-							<div class="col-lg-4">
 								<input type="password" name="user_password" placeholder="Password">
 							</div>
 							<div class="col-lg-4">
 								<input type="password" placeholder="Password">
 							</div>
 							<div class="col-lg-4">
-								<input type="hidden" placeholder="Phone">
+								<input type="text" name="user_name" placeholder="name">
 							</div>
 							<div class="col-lg-4">
-								<input type="text" name="user_name" placeholder="name">
+								<input type="text" name="user_nickname" placeholder="nickname">
+							</div>
+							<div class="col-lg-4">
+								<input type="date" name="birth_date" placeholder="birth_date">
+							</div>
+							<div class="col-lg-4">
+								<input type="text" name="user_email" placeholder="user_email">
+							</div>
+							<div class="col-lg-4">
+								<input type="text" name="user_phone" placeholder="user_phone">
+							</div>
+							<div class="col-lg-4">
+								<input type="text" name="license" placeholder="license">
 							</div>
 							<div class="col-lg-12 text-center">
 								<textarea placeholder="Messages"></textarea>
