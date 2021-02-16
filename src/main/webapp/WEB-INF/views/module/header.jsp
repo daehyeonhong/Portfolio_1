@@ -31,6 +31,9 @@
 							<li><a href="#">Harriet</a></li>
 						</ul>
 					</li>
+					<li ${path=='/upload' ? 'class="active"' : '' }>
+						<a href="/upload">업로드</a>
+					</li>
 				</ul>
 			</nav>
 			<sec:authorize access="isAnonymous()">

@@ -1,7 +1,10 @@
 package com.portfolio.carrental.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
@@ -13,6 +16,12 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages = { "com.portfolio.carrental.controller", "com.portfolio.carrental.exception" })
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class ServletConfig implements WebMvcConfigurer {
+
+	@Bean
+	public MultipartResolver multipartResolver() {
+		StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver();
+		return multipartResolver;
+	}
 
 	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {
