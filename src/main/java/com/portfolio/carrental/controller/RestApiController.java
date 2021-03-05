@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/rest/*")
+@RequestMapping(value = "/rest")
 public class RestApiController {
 
 	@RequestMapping(value = "/{user_id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
