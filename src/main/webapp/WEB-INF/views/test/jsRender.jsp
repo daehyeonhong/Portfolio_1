@@ -12,14 +12,32 @@
     <%@include file="/WEB-INF/views/module/header.jsp"%>
 
     <article>
-        <table>
-            <tbody>
-                <tr>
-                    <td>Name</td>
-                    <td>{{:name}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="result"></div>
+
+        <script id="theTmpl" type="text/x-jsrender">
+            <div>
+                <em>Name:</em> {{:name}}
+                {{if showNickname && nickname}}
+                (Goes by <em>{{:nickname}}</em>)
+                {{/if}}
+            </div>
+        </script>
+
+        <script>
+            var data = [{
+                "name": "Robert",
+                "nickname": "Bob",
+                "showNickname": true
+            }, {
+                "name": "Susan",
+                "nickname": "Sue",
+                "showNickname": false
+            }];
+            var template =
+                $.templates("#theTmpl");
+            var htmlOutput = template.render(data);
+            $("#result").html(htmlOutput);
+        </script>
     </article>
 
     <%@include file="/WEB-INF/views/module/footer.jsp"%>
