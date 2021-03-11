@@ -10,9 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value = "/test")
 public class TestController {
 
-	@RequestMapping(value = "/jsRender", method = RequestMethod.GET)
-	public void jsRender() {
-		log.info("jsRender");
-	}
+    @RequestMapping(value = "/jsRender", method = RequestMethod.GET)
+    public void jsRender() {
+        log.info("jsRender");
+    }
 
 }

@@ -13,11 +13,11 @@
 
 <article>
 
-	<form action="/upload/uploadFormAction" method="post" enctype="multipart/form-data">
-		<input type="file" name="uploadFile" multiple>
-		<input type="submit" value="submit">
-		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-	</form>
+    <form action="/upload/uploadFormAction" method="post" enctype="multipart/form-data">
+        <input type="file" name="uploadFile" multiple>
+        <input type="submit" value="submit">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+    </form>
 
 </article>
 

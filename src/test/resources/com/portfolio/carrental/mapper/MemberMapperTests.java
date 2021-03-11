@@ -14,19 +14,19 @@ import com.portfolio.carrental.domain.UserVO;
 @Log4j
 public class UserMapperTests {
 
-	@Setter(onMethod_ = @Autowired)
-	private UserMapper UserMapper;
+    @Setter(onMethod_ = @Autowired)
+    private UserMapper UserMapper;
 
-	@Test
-	public void testRead() {
+    @Test
+    public void testRead() {
 
-		log.info("Read");
+        log.info("Read");
 
-		UserVO vo = UserMapper.read("admin9");
-		log.info(vo);
+        UserVO vo = UserMapper.read("admin9");
+        log.info(vo);
 
-		vo.getAuthList().forEach(authVo -> log.info(authVo));
+        vo.getAuthList().forEach(authVo -> log.info(authVo));
 
-	}
+    }
 
 }

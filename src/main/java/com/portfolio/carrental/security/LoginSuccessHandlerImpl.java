@@ -13,21 +13,21 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class LoginSuccessHandlerImpl implements AuthenticationSuccessHandler {
 
-	@Override
-	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-			Authentication authentication) throws IOException, ServletException {
-		log.warn("Login Success");
+    @Override
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+            Authentication authentication) throws IOException, ServletException {
+        log.warn("Login Success");
 
-		List<String> roleNames = new ArrayList<String>();
+        List<String> roleNames = new ArrayList<String>();
 
-		authentication.getAuthorities().forEach(authority -> {
-			roleNames.add(authority.getAuthority());
-		});
+        authentication.getAuthorities().forEach(authority -> {
+            roleNames.add(authority.getAuthority());
+        });
 
-		log.warn("ROLE NAMES ==> " + roleNames);
+        log.warn("ROLE NAMES ==> " + roleNames);
 
-		response.sendRedirect(roleNames.contains("ROLE_ADMIN") ? "/sample/admin"
-				: roleNames.contains("ROLE_MEMBER") ? "/sample/member" : "/");
-	}
+        response.sendRedirect(roleNames.contains("ROLE_ADMIN") ? "/sample/admin"
+                : roleNames.contains("ROLE_MEMBER") ? "/sample/member" : "/");
+    }
 
 }

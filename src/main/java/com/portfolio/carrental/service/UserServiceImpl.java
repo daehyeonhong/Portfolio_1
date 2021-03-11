@@ -11,13 +11,13 @@ import com.portfolio.carrental.mappers.UserMapper;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
 
-	private UserMapper userMapper;
+    private UserMapper userMapper;
 
-	@Override
-	public void register(UserVO userVO) {
-		log.info("User Register ==> " + userVO);
+    @Override
+    public void register(UserVO userVO) {
+        log.info("User Register ==> " + userVO);
 
-		userMapper.register(userVO);
-	}
+        userMapper.register(userVO);
+    }
 
 }

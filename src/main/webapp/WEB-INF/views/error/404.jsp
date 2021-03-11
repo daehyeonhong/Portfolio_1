@@ -21,24 +21,24 @@
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
 </head>
 
 <body>
 <%@include file="/WEB-INF/views/module/loader.jsp"%>
 <%@include file="/WEB-INF/views/module/header.jsp"%>
-	<div id="notfound">
-		<div class="notfound">
-			<div class="notfound-404">
-				<h1>Oops!</h1>
-				<h2>404 - The Page can't be found</h2>
-			</div>
-			<a href="/">Go TO Homepage</a>
-		</div>
-	</div>
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>Oops!</h1>
+                <h2>404 - The Page can't be found</h2>
+            </div>
+            <a href="/">Go TO Homepage</a>
+        </div>
+    </div>
 <%@include file="/WEB-INF/views/module/footer.jsp"%>
 <%@include file="/WEB-INF/module/basic/js.jsp"%>
 </body>

@@ -14,11 +14,11 @@
 
 <article>
 
-	<div class="uploadDiv">
-		<input type="file" name="uploadFile" multiple>
-	</div>
-	
-	<button id="uploadBtn">Upload</button>
+    <div class="uploadDiv">
+        <input type="file" name="uploadFile" multiple>
+    </div>
+    
+    <button id="uploadBtn">Upload</button>
 
 </article>
 

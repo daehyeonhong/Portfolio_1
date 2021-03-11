@@ -13,19 +13,19 @@ import com.portfolio.carrental.domain.UserVO;
 @Getter
 public class UserImpl extends User {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private UserVO userVO;
+    private UserVO userVO;
 
-	public UserImpl(String username, String password, Collection<? extends GrantedAuthority> authorities) {
-		super(username, password, authorities);
-	}
+    public UserImpl(String username, String password, Collection<? extends GrantedAuthority> authorities) {
+        super(username, password, authorities);
+    }
 
-	public UserImpl(UserVO vo) {
-		super(vo.getUser_id(), vo.getUser_password(), vo.getAuthList().stream()
-				.map(auth -> new SimpleGrantedAuthority(auth.getAuthority())).collect(Collectors.toList()));
+    public UserImpl(UserVO vo) {
+        super(vo.getUser_id(), vo.getUser_password(), vo.getAuthList().stream()
+                .map(auth -> new SimpleGrantedAuthority(auth.getAuthority())).collect(Collectors.toList()));
 
-		this.userVO = vo;
-	}
+        this.userVO = vo;
+    }
 
 }

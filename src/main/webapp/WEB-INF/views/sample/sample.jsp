@@ -8,21 +8,21 @@
 </head>
 
 <body>
-	<%@include file="/WEB-INF/views/module/loader.jsp"%>
-	<%@include file="/WEB-INF/views/module/header.jsp"%>
+    <%@include file="/WEB-INF/views/module/loader.jsp"%>
+    <%@include file="/WEB-INF/views/module/header.jsp"%>
 
-	<article>
-		<div class="newslatter-inner set-bg">
-			<form action="/rest" method="post" class="ni-form">
-				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-				<input type="text" id="user_id" placeholder="number" />
-				<button type="submit">Subscribe</button>
-			</form>
-		</div>
-	</article>
+    <article>
+        <div class="newslatter-inner set-bg">
+            <form action="/rest" method="post" class="ni-form">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                <input type="text" id="user_id" placeholder="number" />
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </article>
 
-	<%@include file="/WEB-INF/views/module/footer.jsp"%>
-	<%@include file="/WEB-INF/module/basic/js.jsp"%>
+    <%@include file="/WEB-INF/views/module/footer.jsp"%>
+    <%@include file="/WEB-INF/module/basic/js.jsp"%>
 </body>
 
 </html>

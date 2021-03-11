@@ -16,37 +16,37 @@ import com.portfolio.carrental.service.UserService;
 @RequestMapping(value = "/user/*")
 public class UserController {
 
-	private UserService userService;
+    private UserService userService;
 
-	@GetMapping(value = "/login")
-	public void loginInput(String error, String logout, Model model) {
-		log.info("error ==> " + error);
-		log.info("logout ==> " + logout);
+    @GetMapping(value = "/login")
+    public void loginInput(String error, String logout, Model model) {
+        log.info("error ==> " + error);
+        log.info("logout ==> " + logout);
 
-		if (error != null) {
-			model.addAttribute("error", "Login Error Check Your Account");
-		}
+        if (error != null) {
+            model.addAttribute("error", "Login Error Check Your Account");
+        }
 
-		if (logout != null) {
-			model.addAttribute("logout", "Logout!!");
-		}
-	}
+        if (logout != null) {
+            model.addAttribute("logout", "Logout!!");
+        }
+    }
 
-	@GetMapping(value = "/logout")
-	public void logoutGET() {
-		log.info("Logout");
-	}
+    @GetMapping(value = "/logout")
+    public void logoutGET() {
+        log.info("Logout");
+    }
 
-	@GetMapping(value = "/register")
-	public void register() {
-		log.info("Register");
-	}
+    @GetMapping(value = "/register")
+    public void register() {
+        log.info("Register");
+    }
 
-	@PostMapping(value = "/register")
-	public String registers(UserVO userVO) {
-		log.info("Registers");
-		userService.register(userVO);
-		return "redirect:/user/login";
-	}
+    @PostMapping(value = "/register")
+    public String registers(UserVO userVO) {
+        log.info("Registers");
+        userService.register(userVO);
+        return "redirect:/user/login";
+    }
 
 }

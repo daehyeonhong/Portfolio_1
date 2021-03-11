@@ -11,11 +11,11 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class CommonExceptionAdvice {
 
-	@ExceptionHandler(NoHandlerFoundException.class)
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public String except(NoHandlerFoundException ex) {
-		log.error("Exception ==> " + ex.getMessage());
-		return "/error/404";
-	}
+    @ExceptionHandler(NoHandlerFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String except(NoHandlerFoundException ex) {
+        log.error("Exception ==> " + ex.getMessage());
+        return "/error/404";
+    }
 
 }
