@@ -49,10 +49,10 @@ public class UploadController {
 
             try {
                 multipartFile.transferTo(saveFile);
-			} catch (Exception e) {
-				log.error(e.getStackTrace());
-			}
-		}
-	}
+            } catch (Exception e) {
+                log.error(e.getStackTrace());
+            }
+        }
+    }
 
 }

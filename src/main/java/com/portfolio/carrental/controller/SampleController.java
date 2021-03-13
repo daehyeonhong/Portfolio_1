@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "/sample")
 public class SampleController {
 
-	@RequestMapping(value = "")
-	public String sample() {
-		return "/sample/sample";
-	}
+    @RequestMapping(value = "")
+    public String sample() {
+        return "/sample/sample";
+    }
 
 }

@@ -25,46 +25,46 @@ import com.portfolio.carrental.security.UserDetailsServiceImpl;
 @Log4j
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Setter(onMethod_ = @Autowired)
-	private DataSource dataSource;
+    @Setter(onMethod_ = @Autowired)
+    private DataSource dataSource;
 
-	@Bean
-	public UserDetailsService userDetailsService() {
-		return new UserDetailsServiceImpl();
-	}
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new UserDetailsServiceImpl();
+    }
 
-	@Bean
-	public HttpFirewall defaultHttpFirewall() {
-		return new DefaultHttpFirewall();
-	}
+    @Bean
+    public HttpFirewall defaultHttpFirewall() {
+        return new DefaultHttpFirewall();
+    }
 
-	@Bean
-	public AuthenticationSuccessHandler loginSuccessHandler() {
-		return new LoginSuccessHandlerImpl();
-	}
+    @Bean
+    public AuthenticationSuccessHandler loginSuccessHandler() {
+        return new LoginSuccessHandlerImpl();
+    }
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.httpFirewall(defaultHttpFirewall());
-	}
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.httpFirewall(defaultHttpFirewall());
+    }
 
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		log.info("Configure with JDBC");
-		auth.userDetailsService(userDetailsService()).passwordEncoder(passwordEncoder());
-	}
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        log.info("Configure with JDBC");
+        auth.userDetailsService(userDetailsService()).passwordEncoder(passwordEncoder());
+    }
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
 
-		http.formLogin().loginPage("/user/login").loginProcessingUrl("/login").successHandler(loginSuccessHandler());
+        http.formLogin().loginPage("/user/login").loginProcessingUrl("/login").successHandler(loginSuccessHandler());
 
-		http.logout().logoutUrl("/logout").invalidateHttpSession(true);
-	}
+        http.logout().logoutUrl("/logout").invalidateHttpSession(true);
+    }
 
 }

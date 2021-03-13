@@ -8,18 +8,18 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class IndexController {
 
-	@GetMapping(value = "/")
-	public String index() {
-		log.info("index");
+    @GetMapping(value = "/")
+    public String index() {
+        log.info("index");
 
-		return "/index";
-	}
+        return "/index";
+    }
 
-	@GetMapping(value = "/login")
-	public String login() {
-		log.info("login");
+    @GetMapping(value = "/login")
+    public String login() {
+        log.info("login");
 
-		return "/login";
-	}
+        return "/login";
+    }
 
 }

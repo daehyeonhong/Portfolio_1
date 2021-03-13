@@ -12,37 +12,37 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value = "/secure")
 public class SecureController {
 
-	@GetMapping(value = "/all")
-	public void all() {
-		log.info("All Can Access Everybody");
-	}
+    @GetMapping(value = "/all")
+    public void all() {
+        log.info("All Can Access Everybody");
+    }
 
-	@GetMapping(value = "/notice")
-	public void notice() {
-		log.info("Notice");
-	}
+    @GetMapping(value = "/notice")
+    public void notice() {
+        log.info("Notice");
+    }
 
-	@GetMapping(value = "/member")
-	@PreAuthorize("isAuthenticated()")
-	public void member() {
-		log.info("Logined Member");
-	}
+    @GetMapping(value = "/member")
+    @PreAuthorize("isAuthenticated()")
+    public void member() {
+        log.info("Logined Member");
+    }
 
-	@GetMapping(value = "/admin")
-	public void admin() {
-		log.info("Admin Only");
-	}
+    @GetMapping(value = "/admin")
+    public void admin() {
+        log.info("Admin Only");
+    }
 
-	@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_MEMBER')")
-	@GetMapping("/annoMemer")
-	public void member2() {
-		log.info("Logined Annotation Member");
-	}
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_MEMBER')")
+    @GetMapping("/annoMemer")
+    public void member2() {
+        log.info("Logined Annotation Member");
+    }
 
-	@Secured({ "ROLE_ADMIN" })
-	@GetMapping("/annoAdmin")
-	public void admin2() {
-		log.info("Admin Annotation Only");
-	}
+    @Secured({ "ROLE_ADMIN" })
+    @GetMapping("/annoAdmin")
+    public void admin2() {
+        log.info("Admin Annotation Only");
+    }
 
 }

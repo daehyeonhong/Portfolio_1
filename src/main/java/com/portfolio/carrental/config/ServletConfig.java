@@ -17,26 +17,26 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class ServletConfig implements WebMvcConfigurer {
 
-	@Bean
-	public MultipartResolver multipartResolver() {
-		StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver();
-		return multipartResolver;
-	}
+    @Bean
+    public MultipartResolver multipartResolver() {
+        StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver();
+        return multipartResolver;
+    }
 
-	@Override
-	public void configureViewResolvers(ViewResolverRegistry registry) {
+    @Override
+    public void configureViewResolvers(ViewResolverRegistry registry) {
 
-		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-		viewResolver.setViewClass(JstlView.class);
-		viewResolver.setPrefix("/WEB-INF/views/");
-		viewResolver.setSuffix(".jsp");
-		registry.viewResolver(viewResolver);
-	}
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
+        registry.viewResolver(viewResolver);
+    }
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-	}
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
 
 }

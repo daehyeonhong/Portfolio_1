@@ -29,55 +29,55 @@ import lombok.Setter;
 @PropertySource(value = { "classpath:/com/portfolio/carrental/config/database.properties" })
 public class RootConfig {
 
-	@Setter(onMethod_ = @Autowired)
-	ApplicationContext applicationContext;
+    @Setter(onMethod_ = @Autowired)
+    ApplicationContext applicationContext;
 
-	@Value("${dataSource.url}")
-	private String jdbcUrl;
-	@Value("${dataSource.driverClassName}")
-	private String driverClassName;
-	@Value("${dataSource.user}")
-	private String user;
-	@Value("${dataSource.password}")
-	private String password;
-	@Value("${hikari.connectionTestQuery}")
-	private String connecttionTestQuery;
-	@Value("${hikari.maximumPoolSize}")
-	private int maximumPoolSize;
-	@Value("${hikari.idleTimeout}")
-	private long idleTimeout;
-	@Value("${hikari.maxLifetime}")
-	private long maxLifeTime;
-	@Value("${hikari.connectionTimeout}")
-	private long connectionTimeout;
+    @Value("${dataSource.url}")
+    private String jdbcUrl;
+    @Value("${dataSource.driverClassName}")
+    private String driverClassName;
+    @Value("${dataSource.user}")
+    private String user;
+    @Value("${dataSource.password}")
+    private String password;
+    @Value("${hikari.connectionTestQuery}")
+    private String connecttionTestQuery;
+    @Value("${hikari.maximumPoolSize}")
+    private int maximumPoolSize;
+    @Value("${hikari.idleTimeout}")
+    private long idleTimeout;
+    @Value("${hikari.maxLifetime}")
+    private long maxLifeTime;
+    @Value("${hikari.connectionTimeout}")
+    private long connectionTimeout;
 
-	@Bean
-	public DataSource dataSource() {
-		HikariConfig hikariConfig = new HikariConfig();
-		hikariConfig.setDriverClassName(driverClassName);
-		hikariConfig.setJdbcUrl(jdbcUrl);
-		hikariConfig.setUsername(user);
-		hikariConfig.setPassword(password);
-		hikariConfig.setConnectionTestQuery(connecttionTestQuery);
-		hikariConfig.setMaximumPoolSize(maximumPoolSize);
-		hikariConfig.setIdleTimeout(idleTimeout);
-		hikariConfig.setMaxLifetime(maxLifeTime);
-		hikariConfig.setConnectionTimeout(connectionTimeout);
-		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
-		return dataSource;
-	}
+    @Bean
+    public DataSource dataSource() {
+        HikariConfig hikariConfig = new HikariConfig();
+        hikariConfig.setDriverClassName(driverClassName);
+        hikariConfig.setJdbcUrl(jdbcUrl);
+        hikariConfig.setUsername(user);
+        hikariConfig.setPassword(password);
+        hikariConfig.setConnectionTestQuery(connecttionTestQuery);
+        hikariConfig.setMaximumPoolSize(maximumPoolSize);
+        hikariConfig.setIdleTimeout(idleTimeout);
+        hikariConfig.setMaxLifetime(maxLifeTime);
+        hikariConfig.setConnectionTimeout(connectionTimeout);
+        HikariDataSource dataSource = new HikariDataSource(hikariConfig);
+        return dataSource;
+    }
 
-	@Bean
-	public SqlSessionFactory sqlSessionFactory() throws Exception {
-		SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
-		sqlSessionFactory.setDataSource(dataSource());
-		sqlSessionFactory.setConfigLocation(
-				applicationContext.getResource("classpath:/com/portfolio/carrental/config/mybatis-config.xml"));
-		return (SqlSessionFactory) sqlSessionFactory.getObject();
-	}
+    @Bean
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+        sqlSessionFactory.setDataSource(dataSource());
+        sqlSessionFactory.setConfigLocation(
+                applicationContext.getResource("classpath:/com/portfolio/carrental/config/mybatis-config.xml"));
+        return (SqlSessionFactory) sqlSessionFactory.getObject();
+    }
 
-	public DataSourceTransactionManager txManager() {
-		return new DataSourceTransactionManager(dataSource());
-	}
+    public DataSourceTransactionManager txManager() {
+        return new DataSourceTransactionManager(dataSource());
+    }
 
 }

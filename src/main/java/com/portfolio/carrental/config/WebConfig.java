@@ -8,35 +8,35 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-	@Override
-	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { RootConfig.class, SecurityConfig.class };
-	}
+    @Override
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[] { RootConfig.class, SecurityConfig.class };
+    }
 
-	@Override
-	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] { ServletConfig.class };
-	}
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[] { ServletConfig.class };
+    }
 
-	@Override
-	protected String[] getServletMappings() {
-		return new String[] { "/" };
-	}
+    @Override
+    protected String[] getServletMappings() {
+        return new String[] { "/" };
+    }
 
-	@Override
-	protected void customizeRegistration(ServletRegistration.Dynamic registration) {
-		registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
-		MultipartConfigElement multipartConfigElement = new MultipartConfigElement("C:\\TEMP\\UPLOAD", 20971520, 41943040, 20971520);
-		registration.setMultipartConfig(multipartConfigElement);
-	}
+    @Override
+    protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+        registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
+        MultipartConfigElement multipartConfigElement = new MultipartConfigElement("C:\\TEMP\\UPLOAD", 20971520, 41943040, 20971520);
+        registration.setMultipartConfig(multipartConfigElement);
+    }
 
-	@Override
-	protected Filter[] getServletFilters() {
-		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-		characterEncodingFilter.setEncoding("UTF-8");
-		characterEncodingFilter.setForceEncoding(true);
+    @Override
+    protected Filter[] getServletFilters() {
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+        characterEncodingFilter.setEncoding("UTF-8");
+        characterEncodingFilter.setForceEncoding(true);
 
-		return new Filter[] { characterEncodingFilter };
-	}
+        return new Filter[] { characterEncodingFilter };
+    }
 
 }
